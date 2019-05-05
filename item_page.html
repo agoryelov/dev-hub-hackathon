@@ -1,165 +1,205 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Babaton Tilde Dress</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <style>
-        *{
-            font-weight: 100;
-        }
-      .scrolling-wrapper {
-        overflow-x: scroll;
-        overflow-y: hidden;
-        white-space: nowrap;
-        width: inherit;
-      }
+  <title>Babaton Tilde Dress</title>
+
+  <style>
+    * {
+      font-weight: 100;
+    }
+
+    .scrolling-wrapper {
+      overflow-x: scroll;
+      overflow-y: hidden;
+      white-space: nowrap;
+      width: inherit;
+    }
+
     .card {
-        display: inline-block;
-        width:inherit;
-        height:auto;
-        
+      display: inline-block;
+      width: inherit;
+      height: auto;
+
     }
 
     ::-webkit-scrollbar {
-        width: 0px;  /* Remove scrollbar space */
-        background: transparent;  /* Optional: just make scrollbar invisible */
+      width: 0px;
+      /* Remove scrollbar space */
+      background: transparent;
+      /* Optional: just make scrollbar invisible */
     }
 
-    .item-image{
-        width:inherit;
-        height:auto;
+    .item-image {
+      width: inherit;
+      height: auto;
     }
 
-    #brand-name{
-          font-size:4vw;
-          margin-bottom: 0%;
-          margin-top: 0%;
-        }
+    #brand-name {
+      font-size: 4vw;
+      margin-bottom: 0%;
+      margin-top: 0%;
+    }
 
-        #item-name{
-          font-size:8vw;
-          margin-top:0px;
-          padding-top:0px;
-          font-weight: 400;
-        }
+    #item-name {
+      font-size: 8vw;
+      margin-top: 0px;
+      padding-top: 0px;
+      font-weight: 400;
+    }
 
-        #description{
-          font-size:4vw;
-        }
+    #description {
+      font-size: 4vw;
+    }
 
-        .details{
-            margin-left: 5%;
-        }
+    .details {
+      margin-left: 5%;
+    }
 
-        .size{
-            width:8vw;
-            height: 8vw;
-            text-align: center;
-            font-size: 5vw;
-            background-color: #dfdfdf;
-        }
+    .size {
+      width: 8vw;
+      height: 8vw;
+      text-align: center;
+      font-size: 5vw;
+      background-color: #dfdfdf;
+    }
 
-        #sizes{
-            margin-left: 5%;
-            margin-right: 5%;
-        }
+    #sizes {
+      margin-left: 5%;
+      margin-right: 5%;
+    }
 
-        #addButton{
-            margin: 5%;
-            font-size: 5vw;
-            background-color: black;
-            width: 50vw;
-            font-weight: 500;
-            text-align: center;
-            padding: 1%;
-        }
-        #addButton > a{
-            color:white;
-        }
+    #addButton {
+      margin: 5%;
+      font-size: 5vw;
+      background-color: black;
+      width: 50vw;
+      font-weight: 500;
+      text-align: center;
+      padding: 1%;
+    }
 
+    #addButton>a {
+      color: white;
+    }
+  </style>
+</head>
 
-    </style>
-  </head>
-  <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-                <div class="container">
-                  <a class="navbar-brand" href="#" style="letter-spacing: 0.15em;">
-                    RESTYLE
-                  </a>
-                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
-                      <li class="nav-item  active">
-                        <a class="nav-link" href="#">Vivian Wu</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="./brands.html">Shop</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Closet</a>
-                      </li>
-                      <li id="login-anchor" class="nav-item">
-                        <a rel="leanModal" name="login-dialog" href="#login-dialog" class="nav-link" href="#">Login</a>
-                      </li>
-                      <li id="logout-anchor" class="nav-item">
-                        <a class="nav-link" href="#">Sign Out</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </nav>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="./landing_page.html" style="letter-spacing: 0.15em;">
+        RESTYLE
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 
-        <div class="scrolling-wrapper pt-5">
-                <div class="card"><img src="https://aritzia.scene7.com/is/image/Aritzia/large/s19_01_a08_72388_11215_off_a.jpg" class="img-fluid item-image" alt="Responsive image"></div>
-                <div class="card"><img src="https://aritzia.scene7.com/is/image/Aritzia/large/s19_01_a08_72388_11215_on_a.jpg" class="img-fluid item-image" alt="Responsive image"></div>
-                <div class="card"><img src="https://aritzia.scene7.com/is/image/Aritzia/large/s19_01_a08_72388_11215_on_b.jpg" class="img-fluid item-image" alt="Responsive image"></div>
-                <div class="card"><img src="https://aritzia.scene7.com/is/image/Aritzia/large/s19_01_a08_72388_11215_on_c.jpg" class="img-fluid item-image" alt="Responsive image"></div>
-                <div class="card"><img src="https://aritzia.scene7.com/is/image/Aritzia/large/s19_01_a08_72388_11215_on_e.jpg" class="img-fluid item-image" alt="Responsive image"></div>
-        </div>
-        <div class="details">
-                <p id="brand-name">Babaton</p>
-                <p id="item-name">Tilde Dress</p>
-                <p id="description">This is a midi-length dress, with a straight neckline, adjustable straps and a side slit. <br> 
-                    <br><b>Market Price:</b> $98 
-                    <br> <b>Fabric:</b> Cotton Voile</p>
-        </div>
-        <div id = "sizes" class="scrolling-wrapper">
-                <div class="card"><div class="size">00</div></div>
-                <div class="card"><div class="size">0</div></div>
-                <div class="card"><div class="size">2</div></div>
-                <div class="card"><div class="size">4</div></div>
-                <div class="card"><div class="size">6</div></div>
-                <div class="card"><div class="size">8</div></div>
-                <div class="card"><div class="size">10</div></div>
-                <div class="card"><div class="size">12</div></div>
-                <div class="card"><div class="size">14</div></div>
-                <div class="card"><div class="size">16</div></div>
-                <div class="card"><div class="size">18</div></div>
-        </div>
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a id="user-greeting" class="nav-link" href="./landing_page.html">My Account</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./brands.html">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./closet_page.html">Closet</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-        <div id="addButton"><a href="closet_page.html">Add</a></div>
-        
-         
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script>
-        $(".size").click(function(){
-            $(this).css("background-color","#808080");
-        });
-    </script>
-  </body>
+  <div class="scrolling-wrapper pt-5">
+    <div class="card"><img src="https://aritzia.scene7.com/is/image/Aritzia/large/s19_01_a08_72388_11215_off_a.jpg"
+        class="img-fluid item-image" alt="Responsive image"></div>
+    <div class="card"><img src="https://aritzia.scene7.com/is/image/Aritzia/large/s19_01_a08_72388_11215_on_a.jpg"
+        class="img-fluid item-image" alt="Responsive image"></div>
+    <div class="card"><img src="https://aritzia.scene7.com/is/image/Aritzia/large/s19_01_a08_72388_11215_on_b.jpg"
+        class="img-fluid item-image" alt="Responsive image"></div>
+    <div class="card"><img src="https://aritzia.scene7.com/is/image/Aritzia/large/s19_01_a08_72388_11215_on_c.jpg"
+        class="img-fluid item-image" alt="Responsive image"></div>
+    <div class="card"><img src="https://aritzia.scene7.com/is/image/Aritzia/large/s19_01_a08_72388_11215_on_e.jpg"
+        class="img-fluid item-image" alt="Responsive image"></div>
+  </div>
+  <div class="details">
+    <p id="brand-name">Babaton</p>
+    <p id="item-name">Tilde Dress</p>
+    <p id="description">This is a midi-length dress, with a straight neckline, adjustable straps and a side slit. <br>
+      <br><b>Market Price:</b> $98
+      <br> <b>Fabric:</b> Cotton Voile</p>
+  </div>
+  <div id="sizes" class="scrolling-wrapper">
+    <div class="card">
+      <div class="size">00</div>
+    </div>
+    <div class="card">
+      <div class="size">0</div>
+    </div>
+    <div class="card">
+      <div class="size">2</div>
+    </div>
+    <div class="card">
+      <div class="size">4</div>
+    </div>
+    <div class="card">
+      <div class="size">6</div>
+    </div>
+    <div class="card">
+      <div class="size">8</div>
+    </div>
+    <div class="card">
+      <div class="size">10</div>
+    </div>
+    <div class="card">
+      <div class="size">12</div>
+    </div>
+    <div class="card">
+      <div class="size">14</div>
+    </div>
+    <div class="card">
+      <div class="size">16</div>
+    </div>
+    <div class="card">
+      <div class="size">18</div>
+    </div>
+  </div>
+
+  <div id="addButton"><a href="closet_page.html">Add</a></div>
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Made for <code> Hacking for Humanity 2019</code></p>
+    </div>
+  </footer>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <script>
+    $(".size").click(function () {
+      $(this).css("background-color", "#808080");
+    });
+  </script>
+</body>
+
 </html>
