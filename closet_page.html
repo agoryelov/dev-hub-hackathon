@@ -16,46 +16,12 @@
   </head>
     
   <body>
-      
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="#">RESTYLE</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-          aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-      
-      <!-- Closet Page Title -->
-      <h1 class="your-cloud-closet-heading color-dark text-center">Manage Your Cloud Closet</h1>
-      
       <!-- Current Subscribed Items Container -->
-      <h2 class="subscribed-items-heading text-center bg-dark">Current Subscribed Items: (2) of 8 total</h2>
-      <div class="view" style="background-image: url('./images/closetbg.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+      <h2 class="subscribed-items-heading text-center bg-dark">Current Subscribed Items: (5) of 5 total</h2>
           
         <!-- Horizontal Scroller Through Registered Items -->  
-        <div class="scrolling-wrapper">
-            <div class="card shadow-sm bg-white rounded card-subscribed-items">
+        <div class="scrolling-wrapper" id="subscribed-items-container">
+            <div class="card shadow-sm bg-white rounded card-subscribed-items" id="item-1-card">
                 <img class="card-img-top hanger-icon" src="./images/hanger.svg" alt="hanger">
                 <img class="card-img-top clothing-thumbnail" src="./images/closetitems/1.png" alt="Card image cap">
                     <div class="card-body">
@@ -71,14 +37,14 @@
                             <a class="dropdown-item btn-dark" href="#">Report damage</a>
                             <a class="dropdown-item btn-dark" href="#">Rate item</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item btn-dark" href="#">Return item</a>
+                            <a class="dropdown-item btn-dark" href="#" id="item-1-return-button">Return item</a>
                         </div>
                     </div>
                     </div>
                 </div>
             </div>
         
-            <div class="card shadow-sm bg-white rounded card-subscribed-items">
+            <div class="card shadow-sm bg-white rounded card-subscribed-items" id="item-2-card">
                 <img class="card-img-top hanger-icon" src="./images/hanger.svg" alt="hanger">
                 <img class="card-img-top clothing-thumbnail" src="./images/closetitems/2.png" alt="Card image cap">
                     <div class="card-body">
@@ -94,192 +60,209 @@
                             <a class="dropdown-item btn-dark" href="#">Report damage</a>
                             <a class="dropdown-item btn-dark" href="#">Rate item</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item btn-dark" href="#">Return item</a>
+                            <a class="dropdown-item btn-dark" href="#" id="item-2-return-button">Return item</a>
                         </div>
                     </div>
                     </div>
                 </div>
             </div>
-        </div>
-      </div>      
-      
-      <!-- Current Subscribed Items Container -->
-      <h2 class="closet-history-heading text-center bg-dark">Closet History: (3) Items</h2>
-      <div class="view" style="background-image: url('./images/closet2bg.jpeg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
-          
-        <!-- Horizontal Scroller Through Registered Items -->  
-        <div class="scrolling-wrapper">
-            <div class="card shadow-sm bg-white rounded card-subscribed-items">
-                <img class="card-img-top hanger-icon" src="./images/hanger.svg" alt="hanger">
-                <img class="card-img-top clothing-thumbnail" src="./images/closetitems/4.png" alt="Card image cap">
-                    <div class="card-body">
-                      <h5 class="card-title clothing-heading text-center">Floral Embroidered Dress</h5>
-                      <p class="card-text clothing-brand">Brand: </p>
-                    <div class="d-inline mx-auto center">
-                    <a href="#" class="btn btn-dark mx_auto btn-sm">Details</a>
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-secondary dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Options
-                        </button>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item btn-dark" href="#">Report damage</a>
-                            <a class="dropdown-item btn-dark" href="#">Rate item</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item btn-dark" href="#">Return item</a>
-                        </div>
-                    </div>
-                    </div>
-                </div>
+
+            <div class="card shadow-sm bg-white rounded card-subscribed-items" id="item-3-card">
+              <img class="card-img-top hanger-icon" src="./images/hanger.svg" alt="hanger">
+              <img class="card-img-top clothing-thumbnail" src="./images/closetitems/3.png" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title clothing-heading text-center">Floral Embroidered Dress</h5>
+                    <p class="card-text clothing-brand">Brand: </p>
+                  <div class="d-inline mx-auto center">
+                  <a href="#" class="btn btn-dark mx_auto btn-sm">Details</a>
+                  <div class="btn-group">
+                      <button type="button" class="btn btn-secondary dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Options
+                      </button>
+                      <div class="dropdown-menu">
+                          <a class="dropdown-item btn-dark" href="#">Report damage</a>
+                          <a class="dropdown-item btn-dark" href="#">Rate item</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item btn-dark" href="#" id="item-3-return-button">Return item</a>
+                      </div>
+                  </div>
+                  </div>
+              </div>
             </div>
-        
-            <div class="card shadow-sm bg-white rounded card-subscribed-items">
-                <img class="card-img-top hanger-icon" src="./images/hanger.svg" alt="hanger">
-                <img class="card-img-top clothing-thumbnail" src="./images/closetitems/5.png" alt="Card image cap">
-                    <div class="card-body">
-                      <h5 class="card-title clothing-heading text-center">Floral Embroidered Dress</h5>
-                      <p class="card-text clothing-brand">Brand: </p>
-                    <div class="d-inline mx-auto center">
-                    <a href="#" class="btn btn-dark mx_auto btn-sm">Details</a>
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-secondary dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Options
-                        </button>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item btn-dark" href="#">Report damage</a>
-                            <a class="dropdown-item btn-dark" href="#">Rate item</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item btn-dark" href="#">Return item</a>
-                        </div>
-                    </div>
-                    </div>
-                </div>
+
+            <div class="card shadow-sm bg-white rounded card-subscribed-items" id="item-4-card">
+              <img class="card-img-top hanger-icon" src="./images/hanger.svg" alt="hanger">
+              <img class="card-img-top clothing-thumbnail" src="./images/closetitems/4.png" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title clothing-heading text-center">Floral Embroidered Dress</h5>
+                    <p class="card-text clothing-brand">Brand: </p>
+                  <div class="d-inline mx-auto center">
+                  <a href="#" class="btn btn-dark mx_auto btn-sm">Details</a>
+                  <div class="btn-group">
+                      <button type="button" class="btn btn-secondary dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Options
+                      </button>
+                      <div class="dropdown-menu">
+                          <a class="dropdown-item btn-dark" href="#">Report damage</a>
+                          <a class="dropdown-item btn-dark" href="#">Rate item</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item btn-dark" href="#" id="item-4-return-button">Return item</a>
+                      </div>
+                  </div>
+                  </div>
+              </div>
             </div>
-            
-            <div class="card shadow-sm bg-white rounded card-subscribed-items">
-                <img class="card-img-top hanger-icon" src="./images/hanger.svg" alt="hanger">
-                <img class="card-img-top clothing-thumbnail" src="./images/closetitems/6.png" alt="Card image cap">
-                    <div class="card-body">
-                      <h5 class="card-title clothing-heading text-center">Floral Embroidered Dress</h5>
-                      <p class="card-text clothing-brand">Brand: </p>
-                    <div class="d-inline mx-auto center">
-                    <a href="#" class="btn btn-dark mx_auto btn-sm">Details</a>
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-secondary dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Options
-                        </button>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item btn-dark" href="#">Report damage</a>
-                            <a class="dropdown-item btn-dark" href="#">Rate item</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item btn-dark" href="#">Return item</a>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </div>      
+
+        </div>  
     
     <!-- Return Bin Container -->
-      <h2 class="return-bin-heading text-center bg-dark">Return Bin: (4) Items</h2>
-      <div class="view" style="background-image: url('./images/closet3bg.jpeg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+      <h2 class="return-bin-heading text-center bg-dark">Return Bin: (1) Items</h2>
           
         <!-- Horizontal Scroller Through Registered Items -->  
-        <div class="scrolling-wrapper">
-            <div class="card shadow-sm bg-white rounded card-subscribed-items">
-                <img class="card-img-top hanger-icon" src="./images/hanger.svg" alt="hanger">
-                <img class="card-img-top clothing-thumbnail" src="./images/closetitems/7.png" alt="Card image cap">
-                    <div class="card-body">
-                      <h5 class="card-title clothing-heading text-center">Floral Embroidered Dress</h5>
-                      <p class="card-text clothing-brand">Brand: </p>
-                    <div class="d-inline mx-auto center">
-                    <a href="#" class="btn btn-dark mx_auto btn-sm">Details</a>
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-secondary dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Options
-                        </button>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item btn-dark" href="#">Report damage</a>
-                            <a class="dropdown-item btn-dark" href="#">Rate item</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item btn-dark" href="#">Return item</a>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-            </div>
-        
-            <div class="card shadow-sm bg-white rounded card-subscribed-items">
-                <img class="card-img-top hanger-icon" src="./images/hanger.svg" alt="hanger">
-                <img class="card-img-top clothing-thumbnail" src="./images/closetitems/8.png" alt="Card image cap">
-                    <div class="card-body">
-                      <h5 class="card-title clothing-heading text-center">Floral Embroidered Dress</h5>
-                      <p class="card-text clothing-brand">Brand: </p>
-                    <div class="d-inline mx-auto center">
-                    <a href="#" class="btn btn-dark mx_auto btn-sm">Details</a>
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-secondary dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Options
-                        </button>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item btn-dark" href="#">Report damage</a>
-                            <a class="dropdown-item btn-dark" href="#">Rate item</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item btn-dark" href="#">Return item</a>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-            </div>
+        <div class="scrolling-wrapper" id="return-bin-container">
             
-            <div class="card shadow-sm bg-white rounded card-subscribed-items">
-                <img class="card-img-top hanger-icon" src="./images/hanger.svg" alt="hanger">
-                <img class="card-img-top clothing-thumbnail" src="./images/closetitems/9.png" alt="Card image cap">
-                    <div class="card-body">
-                      <h5 class="card-title clothing-heading text-center">Floral Embroidered Dress</h5>
-                      <p class="card-text clothing-brand">Brand: </p>
-                    <div class="d-inline mx-auto center">
-                    <a href="#" class="btn btn-dark mx_auto btn-sm">Details</a>
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-secondary dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Options
-                        </button>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item btn-dark" href="#">Report damage</a>
-                            <a class="dropdown-item btn-dark" href="#">Rate item</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item btn-dark" href="#">Return item</a>
-                        </div>
-                    </div>
+          <div class="card shadow-sm bg-white rounded card-subscribed-items" id="item-5-card">
+            <img class="card-img-top hanger-icon" src="./images/hanger.svg" alt="hanger">
+            <img class="card-img-top clothing-thumbnail" src="./images/closetitems/5.png" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title clothing-heading text-center">Floral Embroidered Dress</h5>
+                  <p class="card-text clothing-brand">Brand: </p>
+                <div class="d-inline mx-auto center">
+                <a href="#" class="btn btn-dark mx_auto btn-sm">Details</a>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-secondary dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Options
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item btn-dark" href="#">Rate item</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item btn-dark" href="#" id="item-2-return-button">Return item</a>
                     </div>
                 </div>
-            </div>
-            
-            <div class="card shadow-sm bg-white rounded card-subscribed-items">
-                <img class="card-img-top hanger-icon" src="./images/hanger.svg" alt="hanger">
-                <img class="card-img-top clothing-thumbnail" src="./images/closetitems/10.png" alt="Card image cap">
-                    <div class="card-body">
-                      <h5 class="card-title clothing-heading text-center">Floral Embroidered Dress</h5>
-                      <p class="card-text clothing-brand">Brand: </p>
-                    <div class="d-inline mx-auto center">
-                    <a href="#" class="btn btn-dark mx_auto btn-sm">Details</a>
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-secondary dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Options
-                        </button>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item btn-dark" href="#">Report damage</a>
-                            <a class="dropdown-item btn-dark" href="#">Rate item</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item btn-dark" href="#">Return item</a>
-                        </div>
-                    </div>
-                    </div>
                 </div>
             </div>
+           </div>
             
         </div>
-      </div>     
+
+    <!-- Closet History Container -->
+    <h2 class="closet-history-heading text-center bg-dark">Closet History: (3) Items</h2>
+          
+    <!-- Horizontal Scroller Through Registered Items -->  
+    <div class="scrolling-wrapper">
+        <div class="card shadow-sm bg-white rounded card-subscribed-items">
+            <img class="card-img-top hanger-icon" src="./images/hanger.svg" alt="hanger">
+            <img class="card-img-top clothing-thumbnail" src="./images/closetitems/6.png" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title clothing-heading text-center">Floral Embroidered Dress</h5>
+                  <p class="card-text clothing-brand">Brand: </p>
+                <div class="d-inline mx-auto center">
+                <a href="#" class="btn btn-dark mx_auto btn-sm">Details</a>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-secondary dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Options
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item btn-dark" href="#">Rate item</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item btn-dark" href="#">Reorder item</a>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card shadow-sm bg-white rounded card-subscribed-items">
+            <img class="card-img-top hanger-icon" src="./images/hanger.svg" alt="hanger">
+            <img class="card-img-top clothing-thumbnail" src="./images/closetitems/7.png" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title clothing-heading text-center">Floral Embroidered Dress</h5>
+                  <p class="card-text clothing-brand">Brand: </p>
+                <div class="d-inline mx-auto center">
+                <a href="#" class="btn btn-dark mx_auto btn-sm">Details</a>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-secondary dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Options
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item btn-dark" href="#">Rate item</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item btn-dark" href="#">Reorder item</a>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card shadow-sm bg-white rounded card-subscribed-items">
+            <img class="card-img-top hanger-icon" src="./images/hanger.svg" alt="hanger">
+            <img class="card-img-top clothing-thumbnail" src="./images/closetitems/8.png" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title clothing-heading text-center">Floral Embroidered Dress</h5>
+                  <p class="card-text clothing-brand">Brand: </p>
+                <div class="d-inline mx-auto center">
+                <a href="#" class="btn btn-dark mx_auto btn-sm">Details</a>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-secondary dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Options
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item btn-dark" href="#">Rate item</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item btn-dark" href="#">Reorder item</a>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card shadow-sm bg-white rounded card-subscribed-items">
+          <img class="card-img-top hanger-icon" src="./images/hanger.svg" alt="hanger">
+          <img class="card-img-top clothing-thumbnail" src="./images/closetitems/9.png" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title clothing-heading text-center">Floral Embroidered Dress</h5>
+                <p class="card-text clothing-brand">Brand: </p>
+              <div class="d-inline mx-auto center">
+              <a href="#" class="btn btn-dark mx_auto btn-sm">Details</a>
+              <div class="btn-group">
+                  <button type="button" class="btn btn-secondary dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Options
+                  </button>
+                  <div class="dropdown-menu">
+                      <a class="dropdown-item btn-dark" href="#">Rate item</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item btn-dark" href="#">Reorder item</a>
+                  </div>
+              </div>
+              </div>
+          </div>
+        </div>
+
+        <div class="card shadow-sm bg-white rounded card-subscribed-items">
+          <img class="card-img-top hanger-icon" src="./images/hanger.svg" alt="hanger">
+          <img class="card-img-top clothing-thumbnail" src="./images/closetitems/10.png" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title clothing-heading text-center">Floral Embroidered Dress</h5>
+                <p class="card-text clothing-brand">Brand: </p>
+              <div class="d-inline mx-auto center">
+              <a href="#" class="btn btn-dark mx_auto btn-sm">Details</a>
+              <div class="btn-group">
+                  <button type="button" class="btn btn-secondary dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Options
+                  </button>
+                  <div class="dropdown-menu">
+                      <a class="dropdown-item btn-dark" href="#">Rate item</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item btn-dark" href="#">Reorder item</a>
+                  </div>
+              </div>
+              </div>
+          </div>
+        </div>
+
+
+
+    </div>       
     
     <!-- Optional JavaScript -->
     <script src="closet_page.js"></script>
