@@ -3,6 +3,7 @@
 
 <head>
 
+  <!-- Meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
@@ -10,50 +11,19 @@
 
   <title>Start Renting</title>
 
-  <!-- AuthUI API -->
+  <!-- Firebase API -->
+  <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+  
+  <!-- Firebase AuthUI API -->
   <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
   <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Bootstrap CSS -->
+  <!-- Local CSS Imports -->
+  <link type="text/css" rel="stylesheet" href="./css/landing.css" />
+
+  <!-- Bootstrap CSS Imports-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <style>
-    .bg-image-full {
-      background: no-repeat center center scroll;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      background-size: cover;
-      -o-background-size: cover;
-    }
-
-    #logout-anchor {
-      display: none;
-    }
-
-    #login-anchor {
-      display: block;
-    }
-
-    /* Login pop-up style start */
-    #lean_overlay {
-      position: fixed;
-      z-index: 100;
-      top: 0px;
-      left: 0px;
-      height: 100%;
-      width: 100%;
-      background: #000;
-      display: none;
-    }
-
-    #login-dialog {
-      display: none;
-      width: 350px;
-    }
-  </style>
 </head>
 
 <body style="padding-top:55px;">
@@ -66,13 +36,13 @@
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
         aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        
+
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a id="user-greeting" class="nav-link" href="#">Hi Herbert</a>
+            <a id="user-greeting" class="nav-link" href="#">My Account</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="./brands.html">Shop</a>
@@ -91,13 +61,14 @@
     </div>
   </nav>
 
+  <!-- Login Popup -->
   <div id="login-dialog" title="Log In">
     <div id="firebaseui-auth-container"></div>
   </div>
   <div class="modal-content" id="setting-pop">
   </div>
 
-
+  <!-- Sustainable Brands Carousel -->
   <div id="carouselExampleIndicators" class="carousel slide p-0 m-0" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -124,16 +95,22 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
+
+  <!-- Mission statement section -->
   <section class="py-4">
     <div class="container">
       <p class="lead">Start wearing permium clothing from our certified sustainable brands</p>
     </div>
   </section>
+
+  <!-- How To heading section -->
   <section class="py-5 bg-image-full text-center d-flex justify-content-center"
     style="background-image: url('./images/img-landing/girl.jpg'); color: rgba(255, 255, 255, 0.85);">
     <h2>How It Works</h2>
     <div style="height: 50px;"></div>
   </section>
+
+  <!-- How To details section -->
   <section class="py-3">
     <div class="container-fluid">
       <div class="row justify-content-center">
@@ -169,23 +146,25 @@
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+      <p class="m-0 text-center text-white">Made for <code> Hacking for Humanity 2019</code></p>
     </div>
   </footer>
 
-  <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+  
   <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
   </script>
+  
+  <!-- LeanModal library for login popup -->
   <script src="./js/leanmodal.js"></script>
+
+   <!-- Firebase App Setup -->
   <script src="./js/setup-firebase.js"></script>
+
+  <!-- Login Event handler-->
   <script src="./js/login-events.js"></script>
-  <!-- LeanModal login dialog pop-up -->
-  <script>
-    $("#login-anchor").leanModal();
-  </script>
 </body>
 
 </html>

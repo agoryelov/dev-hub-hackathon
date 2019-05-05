@@ -1,0 +1,32 @@
+    .bg-image-full {
+      background: no-repeat center center scroll;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      background-size: cover;
+      -o-background-size: cover;
+    }
+
+    #logout-anchor {
+      display: none;
+    }
+
+    #login-anchor {
+      display: block;
+    }
+
+    /* Login pop-up style start */
+    #lean_overlay {
+      position: fixed;
+      z-index: 100;
+      top: 0px;
+      left: 0px;
+      height: 100%;
+      width: 100%;
+      background: #000;
+      display: none;
+    }
+
+    #login-dialog {
+      display: none;
+      width: 350px;
+    }

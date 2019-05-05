@@ -39,13 +39,14 @@
         $('#login-anchor').hide();
         $('#logout-anchor').show();
         let firstName = user.displayName.split(' ')[0];
-        $('#user-greeting').empty();
         $('#user-greeting').html('Hi ' + firstName);
         $('#user-greeting').show();
       } else {
         //Logged Out...
         $('#logout-anchor').hide();
         $('#login-anchor').show();
+        $('#user-greeting').html('My Account');
+        $('.collapse').collapse('hide');
       }
     });
   })();
@@ -54,4 +55,11 @@
   $('#logout-anchor').click(function () {
     firebase.auth().signOut();
   });
+})();
+
+(function () {
+    $("#login-anchor").leanModal();
+    $("#login-anchor").click(function() {
+      $('.collapse').collapse('hide');
+    });
 })();
