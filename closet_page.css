@@ -1,0 +1,135 @@
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+
+    html {
+    overflow: scroll;
+    overflow-x: hidden;
+    }
+
+    ::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;
+    }
+
+    .scrolling-wrapper {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin-left: 2vw;
+      margin-right: 2vw;
+      &::-webkit-scrollbar {
+      display: none;
+     }
+    }
+    
+    .card {
+      flex: 0 0 auto;
+      transition-duration: 0.7s;
+    }
+
+    .card:hover {
+      cursor: pointer;
+      transform: translate(0%, 5.5%);
+      transition-duration: 0.5s;
+    }
+
+    .hanger-icon {
+      height: 80px;
+      width: 250px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: -2.5vh;
+      margin-bottom: -15px;
+    }
+    
+    .clothing-thumbnail {
+      width: 150px;
+      height: 200px;
+      margin-top: 10px;
+      margin-bottom: -10px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .your-cloud-closet-heading {
+      font-size: 1.6rem;
+      margin-top: 8.5vh;
+    }
+
+    .subscribed-items-heading {
+      border-top: 20px solid #87ADCF;
+      font-size: 1.1rem;
+      margin-top: 1vh;
+      padding-top: 1.3vh;
+      margin-bottom: 0;
+      padding-bottom: 1.3vh;
+      color: #f3f3f3;
+      font-family: 'Roboto', sans-serif;
+      font-weight: lighter;
+    }
+    
+    .closet-history-heading {
+      border-top: 20px solid #368F8B;
+      font-size: 1.1rem;
+      margin-top: 2vh;
+      padding-top: 1.3vh;
+      margin-bottom: 0;
+      padding-bottom: 1.3vh;
+      color: #f3f3f3;
+      font-family: 'Roboto', sans-serif;
+      font-weight: lighter;
+    }
+
+    .return-bin-heading {
+      border-top: 20px solid #FFA630;
+      font-size: 1.1rem;
+      margin-top: 2vh;
+      padding-top: 1.3vh;
+      margin-bottom: 0;
+      padding-bottom: 1.3vh;
+      color: #f3f3f3;
+      font-family: 'Roboto', sans-serif;
+      font-weight: lighter;
+    }
+        
+    .clothing-heading {
+      font-size: 1rem;
+      margin: 0;   
+    }
+    
+    .clothing-brand {
+      font-size: 0.8rem;
+      margin: 0;
+      margin-left: 14px;
+      margin-top: 5px;
+      margin-bottom: 10px;
+    }
+    
+    .grey-bg {
+      background-color: #e9e9e9;
+    }
+
+    .container {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .closet-background {
+      background-image: url("images/closetbg.jpeg");
+      background-repeat: repeat-y;
+      width: 100%;
+    }
+    
+    .card-subscribed-items {
+      width: 250px;
+      margin-bottom: 25px;
+      margin-right: 2vw;
+      margin-top: 1vh;
+    }
+
+    .d-inline.mx-auto.center {
+      text-align: center!important;
+      display:block!important;
+    }
