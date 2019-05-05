@@ -46,7 +46,7 @@
         $('#logout-anchor').hide();
         $('#login-anchor').show();
         $('#user-greeting').html('My Account');
-        $('.collapse').collapse('hide');
+        
       }
     });
   })();
@@ -54,6 +54,7 @@
 (function () {
   $('#logout-anchor').click(function () {
     firebase.auth().signOut();
+    $('.collapse').collapse('hide');
   });
 })();
 
