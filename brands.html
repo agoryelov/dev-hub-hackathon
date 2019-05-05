@@ -2,140 +2,25 @@
 <html lang="en">
 
 <head>
+    <!-- AuthUI API -->
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
 
     <!-- Bootstrap CSS -->
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!-- Font Awesome Icons -->
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title> Brands: Yireh </title> <!-- note add code to change of the page -->
-
-    <style>
-        img {
-            display: block;
-            max-width: 100%;
-            height: auto;
-        }
-        a{
-            text-decoration: none;
-            color: #112111;
-        }
-        
-            #logout-anchor {
-      display: none;
-    }
-
-    #login-anchor {
-      display: block;
-    }
-
-    /* Login pop-up style start */
-    #lean_overlay {
-      position: fixed;
-      z-index: 100;
-      top: 0px;
-      left: 0px;
-      height: 100%;
-      width: 100%;
-      background: #000;
-      display: none;
-    }
-
-    #login-dialog {
-      display: none;
-      width: 350px;
-    }
-        
-        
-        
-        
-        
-        
-        
-        
-        @media only screen and (max-width : 480px) {
-
-
-            .product-img {
-
-                width: 100%;
-            }
-
-            .row {
-
-
-                margin: 0 auto;
-            }
-
-
-            .color-circle {
-
-                ;
-                height: 15px;
-                width: 15px;
-                border-radius: 50%;
-                margin: 2px;
-                border-style: solid;
-                border-width: 1px;
-                border-color: lightgrey;
-                box-shadow: inset 0 0 0 1px white;
-            }
-
-            .color_1 {
-
-                background-color: #212123;
-            }
-
-            .color_2 {
-
-                background-color: #858390;
-
-            }
-
-            .color_3 {
-
-                background-color: #3C4B5E;
-            }
-
-            .color_4 {
-
-                background-color: #CDAFCB;
-            }
-
-
-            .container {
-
-                padding: 0px;
-            }
-
-            .filter_button{
-                
-                width:100%;
-                text-transform: uppercase;
-                border-style:solid;
-                border-color:#858390;
-            }
-            .filter_button:hover{
-                
-                background-color: black;
-                color:white;
-            }
-            
-            
-            .expand_button{
-                
-                height: 30px;
-                width: 30px;
-                color: #858390;
-            }
-        }
-    </style>
+    <link type="text/css" rel="stylesheet" href="./css/brands.css" />
 </head>
 
 <body>
@@ -146,14 +31,14 @@
             <a class="navbar-brand" href="#" style="letter-spacing: 0.15em;">
                 RESTYLE
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a id="user-greeting" class="nav-link" href="#">Hi Herbert</a>
+                        <a id="user-greeting" class="nav-link" href="#"></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./brands.html">Shop</a>
@@ -162,7 +47,8 @@
                         <a class="nav-link" href="#">Closet</a>
                     </li>
                     <li class="nav-item">
-                        <a id="login-anchor" rel="leanModal" name="login-dialog" href="#login-dialog" class="nav-link">Login</a>
+                        <a id="login-anchor" rel="leanModal" name="login-dialog" href="#login-dialog"
+                            class="nav-link">Login</a>
                     </li>
                     <li id="logout-anchor" class="nav-item">
                         <a class="nav-link" href="#">Sign Out</a>
@@ -171,19 +57,21 @@
             </div>
         </div>
     </nav>
+    <!-- Firebase login container -->
+    <div id="login-dialog" title="Log In">
+        <div id="firebaseui-auth-container"></div>
+    </div>
+
+    <div class="modal-content" id="setting-pop">
+    </div>
     <div class="container mt-2 pt-5" id="item-container">
 
-        <!-- Firebase login container -->
-        <div id="login-dialog" title="Log In">
-            <div id="firebaseui-auth-container"></div>
-        </div>
 
-        <div class="modal-content border-0" id="setting-pop">
-        </div>
 
         <!-- Filter Button -->
         <div class="row">
-            <button type="button" class="btn-default btn p-3 m-2 filter_button font-weight-light" id="main_filter_button" data-toggle="modal" data-target="#filter_options"> Filter</button>
+            <button type="button" class="btn-default btn p-3 m-2 filter_button font-weight-light"
+                id="main_filter_button" data-toggle="modal" data-target="#filter_options"> Filter</button>
         </div>
 
         <!-- Hidden Filter Option Modal -->
@@ -194,7 +82,8 @@
 
                     <!-- Modal Header -->
                     <div class="modal-header border-0">
-                        <p class="modal-title font-weight-light text-center" id="modal_title" style="margin: 0 auto;"> Filters </p>
+                        <p class="modal-title font-weight-light text-center" id="modal_title" style="margin: 0 auto;">
+                            Filters </p>
 
                     </div>
 
@@ -238,17 +127,26 @@
     </div>
 
     <!-- Bootstrap built in dependencies -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
 
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
 
     <!-- Load firebase -->
-    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
-    <script src="/js/setup-firebase.js"></script>
-    <script src="/js/login-events.js"></script>
+    <script src="./js/leanmodal.js"></script>
+    <script src="./js/setup-firebase.js"></script>
+    <script src="./js/login-events.js"></script>
 
+    <script>
+        $("#login-anchor").leanModal();
+    </script>
     <!-- Brands page scripts -->
 
     <script>
@@ -261,10 +159,10 @@
             var imgDiv1 = $('<div class = "product-img" id = "' + name1 + '_img" > </div>');
             var img1 = $('<img src="' + link1 + '" alt = "Picture Name">');
 
-            $(img1).mouseenter(function() {
+            $(img1).mouseenter(function () {
                 $(this).attr("src", link1Hover);
                 console.log("hover2");
-            }).mouseleave(function() {
+            }).mouseleave(function () {
                 $(this).attr("src", link1);
                 console.log("hoverleft");
             });
@@ -278,7 +176,9 @@
             divText1.append('<a href = "item_page.html">' + name1 + ' </a>');
 
             var divCircle1 = $('<div class="row justify-content-center pt-3 pb-2"> </div>');
-            divCircle1.append('<span class="color-circle color_1"></span><span class="color-circle color_2"></span><span class="color-circle color_3"></span><span class="color-circle color_4"></span>');
+            divCircle1.append(
+                '<span class="color-circle color_1"></span><span class="color-circle color_2"></span><span class="color-circle color_3"></span><span class="color-circle color_4"></span>'
+            );
 
             var divPrice1 = $('<div class = "row justify-content-center pb-3"> </div>');
             divPrice1.append(price1);
@@ -291,11 +191,11 @@
             var imgDiv2 = $('<div class = "product-img" id = "' + name2 + '_img" > </div>');
             var img2 = $('<img src="' + link2 + '" alt = "Picture Name">');
 
-            $(img2).mouseenter(function() {
+            $(img2).mouseenter(function () {
 
                 $(this).attr("src", link2Hover);
                 console.log("hover2");
-            }).mouseleave(function() {
+            }).mouseleave(function () {
 
                 $(this).attr("src", link2);
                 console.log("hoverleft");
@@ -310,7 +210,9 @@
             divText2.append('<a href = " ">' + name2 + ' </a>');
 
             var divCircle2 = $('<div class="row justify-content-center font-weight-bold pt-3 pb-2">');
-            divCircle2.append('<span class="color-circle color_1"></span><span class="color-circle color_2"></span><span class="color-circle color_3"></span><span class="color-circle color_4"></span>');
+            divCircle2.append(
+                '<span class="color-circle color_1"></span><span class="color-circle color_2"></span><span class="color-circle color_3"></span><span class="color-circle color_4"></span>'
+            );
 
             var divPrice2 = $('<div class = "row justify-content-center pb-3"> </div>');
             divPrice2.append(price2);
@@ -326,14 +228,35 @@
         }
 
         //Generate the rows for our page. Later our server will communicate with the client to do this.
-        generateRow("Babaton Dress", "https://aritzia.scene7.com/is/image/Aritzia/large/s19_01_a08_72388_11215_on_a.jpg", "https://aritzia.scene7.com/is/image/Aritzia/large/s19_01_a08_72388_11215_on_b.jpg", "Retail Price: 159.99", "Camisole", "https://aritzia.scene7.com/is/image/Aritzia/large/s19_08_a02_67186_3924_on_b.jpg", "https://aritzia.scene7.com/is/image/Aritzia/large/s19_08_a02_67186_3924_on_c.jpg", "Retail Price: 159.99");
+        generateRow("Babaton Dress",
+            "https://aritzia.scene7.com/is/image/Aritzia/large/s19_01_a08_72388_11215_on_a.jpg",
+            "https://aritzia.scene7.com/is/image/Aritzia/large/s19_01_a08_72388_11215_on_b.jpg",
+            "Retail Price: 159.99", "Camisole",
+            "https://aritzia.scene7.com/is/image/Aritzia/large/s19_08_a02_67186_3924_on_b.jpg",
+            "https://aritzia.scene7.com/is/image/Aritzia/large/s19_08_a02_67186_3924_on_c.jpg",
+            "Retail Price: 159.99");
 
-        generateRow("Wilfred Dress", "https://aritzia.scene7.com/is/image/Aritzia/large/s19_04_a08_72223_3304_on_a.jpg", "https://aritzia.scene7.com/is/image/Aritzia/large/s19_04_a08_72223_3304_on_b.jpg", "Retail Price: 179.99", "Camisole", "https://aritzia.scene7.com/is/image/Aritzia/large/s19_04_a08_61855_10108_on_a.jpg", "https://aritzia.scene7.com/is/image/Aritzia/medium/s19_04_a08_61855_10108_on_b.jpg", "Retail Price: 99.99");
+        generateRow("Wilfred Dress", "https://aritzia.scene7.com/is/image/Aritzia/large/s19_04_a08_72223_3304_on_a.jpg",
+            "https://aritzia.scene7.com/is/image/Aritzia/large/s19_04_a08_72223_3304_on_b.jpg",
+            "Retail Price: 179.99", "Camisole",
+            "https://aritzia.scene7.com/is/image/Aritzia/large/s19_04_a08_61855_10108_on_a.jpg",
+            "https://aritzia.scene7.com/is/image/Aritzia/medium/s19_04_a08_61855_10108_on_b.jpg",
+            "Retail Price: 99.99");
 
-        generateRow("Babaton Pant", "https://aritzia.scene7.com/is/image/Aritzia/large/s19_01_a06_43443_15712_on_a.jpg", "https://aritzia.scene7.com/is/image/Aritzia/large/s19_01_a06_43443_15712_on_b.jpg", "Retail Price: 89.99", "Wilfred Jumpsuit", "https://aritzia.scene7.com/is/image/Aritzia/large/s19_04_a08_68089_6005_on_a.jpg", "https://aritzia.scene7.com/is/image/Aritzia/large/s19_04_a08_68089_6005_on_b.jpg", "Retail Price: 129.99");
+        generateRow("Babaton Pant", "https://aritzia.scene7.com/is/image/Aritzia/large/s19_01_a06_43443_15712_on_a.jpg",
+            "https://aritzia.scene7.com/is/image/Aritzia/large/s19_01_a06_43443_15712_on_b.jpg",
+            "Retail Price: 89.99", "Wilfred Jumpsuit",
+            "https://aritzia.scene7.com/is/image/Aritzia/large/s19_04_a08_68089_6005_on_a.jpg",
+            "https://aritzia.scene7.com/is/image/Aritzia/large/s19_04_a08_68089_6005_on_b.jpg",
+            "Retail Price: 129.99");
 
-        generateRow("Wilfred Dress", "https://aritzia.scene7.com/is/image/Aritzia/medium/s19_04_a08_73072_16557_on_b.jpg", "https://aritzia.scene7.com/is/image/Aritzia/large/s19_04_a08_73072_16557_on_e.jpg", "Retail Price: 79.99", "Babaton T-Shirt", "https://aritzia.scene7.com/is/image/Aritzia/large/s19_01_a01_67557_15222_on_a.jpg", "https://aritzia.scene7.com/is/image/Aritzia/large/s19_01_a01_67557_15222_on_b.jpg", "Retail Price: 69.99");
-
+        generateRow("Wilfred Dress",
+            "https://aritzia.scene7.com/is/image/Aritzia/medium/s19_04_a08_73072_16557_on_b.jpg",
+            "https://aritzia.scene7.com/is/image/Aritzia/large/s19_04_a08_73072_16557_on_e.jpg",
+            "Retail Price: 79.99", "Babaton T-Shirt",
+            "https://aritzia.scene7.com/is/image/Aritzia/large/s19_01_a01_67557_15222_on_a.jpg",
+            "https://aritzia.scene7.com/is/image/Aritzia/large/s19_01_a01_67557_15222_on_b.jpg",
+            "Retail Price: 69.99");
     </script>
 
 </body>

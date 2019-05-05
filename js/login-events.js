@@ -40,7 +40,7 @@
         $('#logout-anchor').show();
         let firstName = user.displayName.split(' ')[0];
         $('#user-greeting').empty();
-        $('#user-greeting').html('Hi ' + firstName + '!');
+        $('#user-greeting').html('Hi ' + firstName);
         $('#user-greeting').show();
       } else {
         //Logged Out...
