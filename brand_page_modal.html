@@ -8,15 +8,130 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+    <style>
+        #brand-name{
+          font-size:10pt;
+          margin-bottom: 0%;
+          margin-top: 0%;
+        }
+
+        #item-name{
+          font-size:15pt;
+          font-weight: bolder;
+          margin-top:0px;
+          padding-top:0px;
+        }
+        #description{
+          font-size:10pt;
+        }
+
+        #add-button{
+          margin-top:8%;
+        }
+
+        #itemdiv{
+          height:auto;
+          width:100%;
+          background-color:white;
+          margin:0 auto;
+          margin-top: 5%;
+          padding-top: 10%;
+          padding-bottom:10%;
+          padding-left: 2%;
+          padding-right: 2%;
+        }
+        #itemimg{
+          margin-top:20%;
+        }
+        a{
+            color: white;
+            text-decoration: none;
+        }
+        
+
+    </style>
+
+
     <title>Hello, world!</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+   
+    <div class="card" style="width: 18rem;" id="itemListing" data-toggle="modal" data-target="#exampleModalCenter">
+        <img class="card-img-top" src="https://res.cloudinary.com/reformation/image/upload/q_auto:eco/c_scale,w_auto:breakpoints_100_2560_9_20:1066/v1/prod/product_images/belgium-dress/dewdrop/5cba5fd7f35be21cf71a378a/original.jpg" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+    </div>
+
+    <!-- <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div id="itemdiv">    
+            <div class="row m-6 p-6">
+              <div class="col-7">
+                  <img src="https://res.cloudinary.com/reformation/image/upload/q_auto:eco/c_scale,w_auto:breakpoints_100_2560_9_20:1066/v1/prod/product_images/belgium-dress/dewdrop/5cba5fd7f35be21cf71a378a/original.jpg" class="img-fluid" alt="Responsive image">
+              </div>
+
+              <div class="col-5 vertical-center">
+                
+                    <p id="brand-name">Reformation</p>
+                    <p id="item-name">Belguim Dress</p>
+                    <p id="description"> This is a midi length dress with a slight sweetheart neckline, short sleeves and a side slit.</p>
+                    <div class="row">
+                      <div class="col-2"><b>0</b></div>
+                      <div class="col-2">2</div>
+                      <div class="col-2">4</div>
+                      <div class="col-2">6</div>
+                      <div class="col-2">8</div>
+                      <div class="col-2">10</div>
+                    </div>
+                    <button id="add-button" type="button" class="btn btn-dark">Add</button>
+                
+              </div>
+      </div> -->
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-full-height modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+
+        
+          <div class="container-fluid m-6 p-6">
+           
+            <div class="row m-6 p-6">
+              <div class="col-7 vertical-center">
+                  <img id="itemimg" src="https://aritzia.scene7.com/is/image/Aritzia/large/s19_04_a08_72239_3030_on_a.jpg" class="img-fluid" alt="Responsive image">
+              </div>
+              <div class="col-5 vertical-center">
+                
+                    <p id="brand-name">Reformation</p>
+                    <p id="item-name">Belguim Dress</p>
+                    <p id="description">This is a midi length dress with a slight sweetheart neckline, short sleeves and a side slit.</p>
+                    <div class="row">
+                      <div class="col-2"><b>0</b></div>
+                      <div class="col-2">2</div>
+                      <div class="col-2">4</div>
+                      <div class="col-2">6</div>
+                      <div class="col-2">8</div>
+                      <div class="col-2">10</div>
+                    </div>
+                    <button id="add-button" type="button" class="btn btn-dark"><a href="closet_page.html">Add</a></button>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+           
+          
+      </div>
+       
+      </div>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
   </body>
 </html>
