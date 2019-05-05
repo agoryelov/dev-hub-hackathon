@@ -9,60 +9,93 @@
   <meta name="author" content="">
 
   <title>Start Renting</title>
-  <!-- Bootstrap core CSS -->
+
+  <!-- AuthUI API -->
+  <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <style>
-  .bg-image-full {
-  background: no-repeat center center scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-}</style>
+    .bg-image-full {
+      background: no-repeat center center scroll;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      background-size: cover;
+      -o-background-size: cover;
+    }
+
+    #logout-anchor {
+      display: none;
+    }
+
+    #login-anchor {
+      display: block;
+    }
+
+    /* Login pop-up style start */
+    #lean_overlay {
+      position: fixed;
+      z-index: 100;
+      top: 0px;
+      left: 0px;
+      height: 100%;
+      width: 100%;
+      background: #000;
+      display: none;
+    }
+
+    #login-dialog {
+      display: none;
+      width: 350px;
+    }
+  </style>
 </head>
 
-<body style="padding-top:56px;">
+<body style="padding-top:55px;">
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">Restyle</a>
+      <a class="navbar-brand" href="#" style="letter-spacing: 0.15em;">
+        RESTYLE
+      </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
         aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home
-              <span class="sr-only">(current)</span>
-            </a>
+          <li class="nav-item  active">
+            <a class="nav-link" href="#">Vivian Wu</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="./brands.html">Shop</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
+            <a class="nav-link" href="#">Closet</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+          <li id="login-anchor" class="nav-item">
+            <a rel="leanModal" name="login-dialog" href="#login-dialog" class="nav-link" href="#">Login</a>
+          </li>
+          <li id="logout-anchor" class="nav-item">
+            <a class="nav-link" href="#">Sign Out</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Header - set the background image for the header in the line below 
-  <header class="py-5 bg-image-full" style="background-image: url('https://unsplash.it/1900/1080?image=1076');">
-    <img class="img-fluid d-block mx-auto" src="http://placehold.it/200x200&text=Logo" alt="">
-  </header>
--->
-  <!-- Content section -->
+  <div id="login-dialog" title="Log In">
+    <div id="firebaseui-auth-container">safdsadf</div>
+  </div>
+  <div class="modal-content" id="setting-pop">
+  </div>
 
 
   <div id="carouselExampleIndicators" class="carousel slide p-0 m-0" data-ride="carousel">
@@ -92,15 +125,15 @@
     </a>
   </div>
   <section class="py-4">
-      <div class="container">
-  
-        <p class="lead">Start wearing permium clothing from our certified sustainable brands</p>
-      </div>
-    </section>
-    <section class="py-5 bg-image-full text-center color-light" style="background-image: url('./images/img-landing/girl.jpg');">
-      <h2>How It Works</h2>
-      <div style="height: 100px;"></div>
-    </section>
+    <div class="container">
+      <p class="lead">Start wearing permium clothing from our certified sustainable brands</p>
+    </div>
+  </section>
+  <section class="py-5 bg-image-full text-center d-flex justify-content-center"
+    style="background-image: url('./images/img-landing/girl.jpg'); color: rgba(255, 255, 255, 0.85);">
+    <h2>How It Works</h2>
+    <div style="height: 50px;"></div>
+  </section>
   <section class="py-3">
     <div class="container-fluid">
       <div class="row justify-content-center">
@@ -127,8 +160,7 @@
             <img src="images/img-landing/hiw3.png" class="img-fluid" alt="">
           </div>
           <h4>Free Shipping and Repairs</h4>
-          <p class="lead">Let us take care of the boring stuff, while you enjoy fashion at your doorstep.
-          </p>
+          <p class="lead">Let us take care of the boring stuff, while you enjoy fashion at your doorstep.</p>
         </div>
       </div>
     </div>
@@ -141,10 +173,19 @@
     </div>
     <!-- /.container -->
   </footer>
-
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <script src="./js/leanmodal.js"></script>
+  <script src="./js/setup-firebase.js"></script>
+  <script src="./js/login-events.js"></script>
+  <!-- LeanModal login dialog pop-up -->
+  <script>
+    $("#login-anchor").leanModal();
+  </script>
 </body>
 
 </html>
